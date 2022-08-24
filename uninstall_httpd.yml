@@ -1,0 +1,15 @@
+---
+- name: Uninstall httpd playbook
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: Stop httpd service
+    service:
+      name: httpd
+      state: stopped
+
+  - name: Unistalling httpd package
+    yum:
+      name: httpd
+      state: removed
+

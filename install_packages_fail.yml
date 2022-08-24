@@ -1,0 +1,10 @@
+---
+- name: Package installer yml
+  hosts: webservers
+  #  become: yes
+  tasks:
+  - name: Install Package
+    yum:
+      name: tree
+      state: isntalled
+

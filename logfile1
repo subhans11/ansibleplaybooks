@@ -1,0 +1,15 @@
+
+PLAY [Package installer yml] *****************************************************************************************
+
+TASK [Gathering Facts] ***********************************************************************************************
+ok: [172.31.5.46]
+ok: [172.31.13.38]
+
+TASK [Install Package] ***********************************************************************************************
+fatal: [172.31.5.46]: FAILED! => {"changed": false, "msg": "value of state must be one of: absent, installed, latest, present, removed, got: isntalled"}
+fatal: [172.31.13.38]: FAILED! => {"changed": false, "msg": "value of state must be one of: absent, installed, latest, present, removed, got: isntalled"}
+
+PLAY RECAP ***********************************************************************************************************
+172.31.13.38               : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+172.31.5.46                : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+

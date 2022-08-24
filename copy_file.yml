@@ -1,0 +1,12 @@
+---
+- name: Copy playbook
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: Copy a File
+    copy:
+      src: /home/ansadmin/index.html
+      dest: /home/ansadmin
+      mode: 0600
+      owner: rohit
+

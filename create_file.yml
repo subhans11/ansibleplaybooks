@@ -1,0 +1,9 @@
+---
+- name: Create file playbook
+  hosts: webservers
+  become: yes
+  tasks:
+  - name: Creating file
+    file:
+      path: /home/ansadmin/demofile
+      state: touch
